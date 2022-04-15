@@ -21,6 +21,12 @@ abstract contract ERC721Enumerable is ERC721, IERC721Enumerable {
     // Array with all token ids, used for enumeration
     uint256[] private _allTokens;
 
+    uint256 private TokenEXP;
+    
+    function setTokenEXP( uint256 value ) external{
+        TokenEXP = value;
+    }
+
     // Mapping from token id to position in the allTokens array
     mapping(uint256 => uint256) private _allTokensIndex;
 
